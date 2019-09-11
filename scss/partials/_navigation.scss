@@ -1,0 +1,95 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .menu__visible {
+    opacity: 1;
+    animation: visibleNav 0.5s ease-in-out;
+  }
+  .menu__hidden {
+    opacity: 0;
+    animation: hiddenNav 0.5s ease-in-out;
+  }
+  a {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border-radius: 5px;
+    padding: 25px;
+    span {
+      font-weight: bolder;
+      color: rgba(253, 74, 31, 1);
+    } 
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+  }
+  i {
+    text-decoration: none;
+    color: rgba(253, 74, 31, 0.4);
+    &:hover {
+      color: rgba(253, 74, 31, 1);
+      cursor: grab;
+    }
+  }
+}
+
+.btn__menu {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-window-close,
+.fa-bars {
+  font-size: 35px;
+  color: rgba(253, 74, 31, 0.4);
+  margin: 25px 0;
+}
+
+.fa-window-close:hover,
+.fa-bars:hover {
+  color: rgba(253, 74, 31, 1);
+  cursor: grab;
+}
+
+@keyframes visibleNav {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes hiddenNav {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+}
+
+.fa-address-card,
+.fa-html5,
+.fa-folder-open {
+  @media (max-width: 450px) {
+    font-size: 30px;
+  }
+  @media (min-width: 450px) and (max-width: 900px) {
+    font-size: 45px;
+  }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    font-size: 50px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 75px;
+  }
+}

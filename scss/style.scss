@@ -1,0 +1,57 @@
+@import "partials/reset";
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/about";
+@import "partials/technology";
+@import "partials/footer";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fae8be;
+}
+
+#app {
+  height: 100vh;
+}
+
+.scrollBottom,
+.scrollTop {
+  opacity: 0.7;
+  background: #000;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    opacity: 1;
+  }
+  i {
+    font-size: 15px;
+    color: #fff;
+  }
+}
+.scrollTop {
+  bottom: 5px;
+  right: 5px;
+}
+
+@media (max-width: 450px) {
+  
+}
+
+@media (min-width: 450px) and (max-width: 900px) {
+  
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}

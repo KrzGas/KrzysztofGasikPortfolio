@@ -1,0 +1,14 @@
+#Technology {
+  h1 {
+    text-align: center;
+  }
+  .wrapper__image {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      max-width: 100px;
+    }
+  }
+}
