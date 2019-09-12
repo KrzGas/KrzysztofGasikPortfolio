@@ -1,7 +1,7 @@
 const Translation = [
   {
     component: "About",
-    PL: [`Coś o mnie`,`Od czasu studiów interesowałem się tworzeniem stron internetowych (htmli css). W mojej obecnej pracy wykorzystywałem umiejętności i wiedzę zdobytą na kursie w Coders Lab aby wspomagać działanie ankiet w
+    PL: [`Coś o mnie`,`Od czasu studiów interesowałem się tworzeniem stron internetowych (html i css). W mojej obecnej pracy wykorzystywałem umiejętności i wiedzę zdobytą na kursie w Coders Lab aby wspomagać działanie ankiet w
                 badaniach internetowych. Praca jako web developer jest dla mnie kolejnym
                 krokiem, gdyż wciągnęła i zafascynowała mnie, do tego stopnia aby podjąć
                 decyzję o zmianie pracy na to, co mnie jednocześnie rozwija ale i

@@ -16,6 +16,7 @@
       margin: 10px;
       &:hover {
         opacity: 0.7;
+        cursor: pointer;
       }
     }
     .projects__bar {
@@ -32,15 +33,14 @@
       z-index: 1;
     }
     .projects__title {
-        position: absolute;
-        color: #fff;
-        top: 90%;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
+      position: absolute;
+      color: #fff;
+      top: 90%;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
     }
-
   }
 }

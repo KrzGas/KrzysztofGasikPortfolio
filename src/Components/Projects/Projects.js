@@ -41,12 +41,15 @@ const Projects = props => {
       <div className="wrapper__image">
         {projects.map(p => {
           return (
+            <a href={p.url} target="_blank">
             <div
               key={p.name}
               className="projects__image projects__bar"
               style={{ backgroundImage: `url(${p.image})`}}>
+                
               <span className="projects__title">{p.name}</span>
             </div>
+            </a>
           );
         })}
       </div>
