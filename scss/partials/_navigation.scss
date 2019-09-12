@@ -1,3 +1,9 @@
+.wrapper__nav {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -30,7 +36,7 @@ nav {
     color: rgba(253, 74, 31, 0.4);
     &:hover {
       color: rgba(253, 74, 31, 1);
-      cursor: grab;
+      cursor: pointer;
     }
   }
 }
@@ -79,7 +85,8 @@ nav {
 
 .fa-address-card,
 .fa-html5,
-.fa-folder-open {
+.fa-folder-open,
+.fa-envelope {
   @media (max-width: 450px) {
     font-size: 30px;
   }

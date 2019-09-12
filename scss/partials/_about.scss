@@ -1,6 +1,10 @@
 #About {
   margin-top: 25px auto;
   text-align: center;
+  .image__about {
+    border-radius: 25%;
+    border: 1px solid black;
+  }
   img {
     max-width: 150px;
     margin: 25px 0;

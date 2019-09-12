@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import { Navigation } from "../Navigation/Navigation";
+import React, { Component } from "react"
 
 const Header = () => {
   return (
     <header>
       <h1>Portfolio Krzysztof Gasik</h1>
-      <Navigation />
     </header>
   );
 };

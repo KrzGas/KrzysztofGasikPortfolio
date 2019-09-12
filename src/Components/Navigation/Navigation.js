@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Translation from "../Translation";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const MenuElements = [
@@ -16,6 +17,11 @@ const MenuElements = [
     path: "Projects",
     name: "Projekty",
     icon: "far fa-folder-open"
+  },
+  {
+    path: "Footer",
+    name: "Kontakt",
+    icon: "far fa-envelope"
   }
 ];
 
@@ -33,12 +39,13 @@ class Navigation extends Component {
     });
   };
   render() {
+    const vers = this.props.language;
     return (
-      <>
-        <nav>
-          {MenuElements.map(item => (
+      <div className="wrapper__nav">
+        <nav className="wrapper">
+          {MenuElements.map((item,index) => (
             <Link
-              key={item.path}
+              key={item.name}
               to={item.path}
               spy={true}
               smooth={true}
@@ -47,18 +54,23 @@ class Navigation extends Component {
               className={this.state.swap ? "menu__hidden" : "menu__visible"}
             >
               <i className={item.icon} />
-              <span>{item.name}</span>
+              {Translation.filter(v => v.component === this.constructor.name).map(lang => {
+                return (
+                  <span key={vers}>
+                    {vers === "PL" ? lang.PL[index] : lang.EN[index]}
+                  </span>
+                );
+                
+              })}
             </Link>
           ))}
-        </nav>
-        <div className="btn__menu">
           {this.state.swap ? (
             <i className="fas fa-bars" onClick={this.switchMenu} />
           ) : (
             <i className="far fa-window-close" onClick={this.switchMenu} />
           )}
-        </div>
-      </>
+        </nav>
+      </div>
     );
   }
 }

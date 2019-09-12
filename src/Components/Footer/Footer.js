@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Translation from "../Translation";
 
 const socialMediaElements = [
   {
@@ -23,17 +24,29 @@ const socialMediaElements = [
   }
 ];
 
-export const Footer = () => {
+export const Footer = props => {
   return (
-    <footer>
+    <footer id="Footer">
       <span>
-        Krzysztof Gasik &copy; 2019 szukaj mnie na &#160;
+        {Translation.filter(v => v.component === "Footer").map(lang => {
+          return (
+            <span key={props.language}>
+              Krzysztof Gasik &copy; 2019 {props.language === "PL" ? lang.PL[0] : lang.EN[0]}
+            </span>
+          );
+        })}
         <a href="https://github.com/KrzGas" target="_blank">
           <i className="fab fa-github" />
         </a>
-        &#160;&#160;lub&#160;&#160;
+        &#160;&#160;{Translation.filter(v => v.component === "Footer").map(lang => {
+          return (
+            <span key={props.language}>
+              {props.language === "PL" ? lang.PL[1] : lang.EN[1]}
+            </span>
+          );
+        })}&#160;&#160;
         <a href="https://linkedin.com/in/krzysztof-gasik" target="_blank">
-          <i className="fab fa-linkedin-in" id="linked"/>
+          <i className="fab fa-linkedin-in" id="linked" />
         </a>
       </span>
       <ul>

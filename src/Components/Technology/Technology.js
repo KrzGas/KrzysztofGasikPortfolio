@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Translation from "../Translation";
 import css from "../../../img/css.png";
 import git from "../../../img/git.png";
 import html5 from "../../../img/html5.png";
@@ -48,10 +49,14 @@ const icons = [
   },
 ];
 
-const Technology = () => {
+const Technology = (props) => {
   return (
-    <section id="Technology">
-      <h1>Technologie z którymi się zetknąłem</h1>
+    <section id="Technology" className='wrapper'>
+      {Translation.filter(v => v.component === "Technology").map(
+            lang => {
+              return <h1 key={props.language}>{props.language === "PL" ? lang.PL : lang.EN}</h1>;
+            }
+          )}
       <div className="wrapper__image">
       {
         icons.map((icon)=> {
