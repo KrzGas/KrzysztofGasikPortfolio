@@ -51,7 +51,7 @@ class Projects extends Component {
           this.setState({
             click: false
           });
-        }, 5000);
+        }, 10000);
       }
     );
     if (open === "yes") {
@@ -79,9 +79,17 @@ class Projects extends Component {
                     className={`projects__image projects__info__wrapper`}
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    <span className="projects__info__description">
-                      {p.description}
-                    </span>
+                    {Translation.filter(
+                      v => v.component === this.constructor.name
+                    ).map(lang => {
+                      return (
+                        <span className="projects__info__description" key={lang}>
+                          {vers === "PL"
+                            ? lang.PL[index + 1]
+                            : lang.EN[index + 1]}
+                        </span>
+                      );
+                    })}
                     <button
                       className="projects__info__button"
                       onClick={() => this.openProject(p.name, p.url, "yes")}
@@ -97,17 +105,9 @@ class Projects extends Component {
                     style={{ backgroundImage: `url(${p.image})` }}
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    {Translation.filter(
-                      v => v.component === this.constructor.name
-                    ).map(lang => {
-                      return (
-                        <span className="projects__title" key={lang}>
-                          {vers === "PL"
-                            ? lang.PL[index + 1]
-                            : lang.EN[index + 1]}
-                        </span>
-                      );
-                    })}
+                    <span className=" projects__title">
+                      {p.name}
+                    </span>
                   </div>
                 )}
               </div>
