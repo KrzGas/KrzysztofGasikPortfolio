@@ -65,7 +65,7 @@ class Projects extends Component {
       <section id="Projects" className="wrapper">
         {Translation.filter(v => v.component === "Projects").map(lang => {
           return (
-            <h1 key={props.language}>
+            <h1 className="big__font" key={props.language}>
               {props.language === "PL" ? lang.PL[0] : lang.EN[0]}
             </h1>
           );

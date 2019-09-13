@@ -54,7 +54,7 @@ const Technology = (props) => {
     <section id="Technology" className='wrapper'>
       {Translation.filter(v => v.component === "Technology").map(
             lang => {
-              return <h1 key={props.language}>{props.language === "PL" ? lang.PL : lang.EN}</h1>;
+              return <h1 className="big__font" key={props.language}>{props.language === "PL" ? lang.PL : lang.EN}</h1>;
             }
           )}
       <div className="wrapper__image">

@@ -56,8 +56,30 @@ body {
   }
 }
 
-@media (max-width: 450px) {
+.big__font {
+  font-size: 2em;
+  &:hover{
+    animation: movingLetters 1s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
   
+}
+
+@keyframes movingLetters {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
 }
 
 @media (min-width: 450px) and (max-width: 900px) {

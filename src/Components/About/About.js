@@ -7,7 +7,7 @@ const About = (props) => {
       <section id="About" className="wrapper">
         {Translation.filter(v => v.component === "About").map(
             lang => {
-              return <h1 key={props.language}>{props.language === "PL" ? lang.PL[0] : lang.EN[0]}</h1>;
+              return <h1 className="big__font" key={props.language}>{props.language === "PL" ? lang.PL[0] : lang.EN[0]}</h1>;
             }
           )}
         <div className="wrapper__about">
