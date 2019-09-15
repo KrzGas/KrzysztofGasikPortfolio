@@ -16,7 +16,7 @@ const Translation = [
   {
     component: "Technology",
     PL: "Co już znam",
-    EN: "What I know"
+    EN: "What I know?"
   },
   {
     component: "Projects",

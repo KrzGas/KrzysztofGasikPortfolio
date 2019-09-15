@@ -37,6 +37,9 @@
         color: rgba(253, 74, 31, 1);
       }
     }
+    i.fa-envelope, i.fa-phone-square {
+      font-size: 50px;
+    }
   }
 
   @keyframes slowly {
@@ -47,39 +50,4 @@
       opacity: 1;
     }
   }
-  // .envelope__about {
-  //   width: 40px;
-  //   height: 25px;
-  //   border: 2px solid black;
-  //   position: relative;
-  // }
-  // .envelope__about__left, .envelope__about__right {
-  //   position: absolute;
-  //   width: 24px;
-  //   height: 10px;
-  //   border-bottom: 2px solid black;
-    
-  // }
-  // .envelope__about__left {
-  //   left: -1;
-  //   top: -2;
-  //   transform: rotate(35deg);
-  // }
-
-  // .envelope__about__right {
-  //   right: -1;
-  //   top: -2;
-  //   transform: rotate(-35deg);
-  // }
-
-  // .envelope__about:hover .envelope__about__left {
-  //   transform: rotate(145deg);
-  //   left: -1;
-  //   top: -10;
-  // }
-  // .envelope__about:hover .envelope__about__right {
-  //   transform: rotate(-145deg);
-  //   right: -1;
-  //   top: -10;
-  // }
 }
