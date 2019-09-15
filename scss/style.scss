@@ -6,13 +6,20 @@
 @import "partials/projects";
 @import "partials/footer";
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  background: #fae8be;
+  font-family: "Ubuntu", sans-serif;
+  // background: #fae8be;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 232, 190, 1) 100%
+  );
 }
 
 .wrapper {
@@ -58,11 +65,10 @@ body {
 
 .big__font {
   font-size: 2em;
-  &:hover{
+  &:hover {
     animation: movingLetters 1s ease-in-out infinite alternate;
     cursor: pointer;
   }
-  
 }
 
 @keyframes movingLetters {
@@ -83,13 +89,10 @@ body {
 }
 
 @media (min-width: 450px) and (max-width: 900px) {
-  
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
-  
 }
 
 @media (min-width: 1200px) {
-  
 }

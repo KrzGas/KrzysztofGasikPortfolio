@@ -10,25 +10,29 @@ const projects = [
     name: "Let me organize your day",
     url: "https://krzgas.github.io/LetMeOrganizeYourDay/#/",
     description: "Aplikacja do zaplanowania sobie dnia",
-    image: note
+    image: note,
+    repo: "LetMeOrganizeYourDay"
   },
   {
     name: "Oddam Rzeczy",
     url: "https://krzgas.github.io/Oddam-Rzeczy/#/",
     description: "Aplikacja do oddania niepotrzebnych rzeczy",
-    image: things
+    image: things,
+    repo: "Oddam-Rzeczy"
   },
   {
     name: "Catopedia",
     url: "https://krzgas.github.io/Catopedia/#/",
     description: "Aplikacja dla miłośników kotów",
-    image: cat
+    image: cat,
+    repo: "Catopedia"
   },
   {
     name: "Pollen Alert",
     url: "https://krzgas.github.io/PollenAlert/#/",
     description: "Aplikacja dla alergików",
-    image: pollen
+    image: pollen,
+    repo: "PollenAlert"
   }
 ];
 
@@ -54,9 +58,9 @@ class Projects extends Component {
         }, 10000);
       }
     );
-    if (open === "yes") {
-      window.open(url);
-    }
+    (url !== '' && open === "url") ? window.open(url) : null;
+    (url !== '' && open === "rep") ? window.open(`https://github.com/KrzGas/${url}`) : null;
+    
   };
   render() {
     const props = this.props;
@@ -92,11 +96,19 @@ class Projects extends Component {
                     })}
                     <button
                       className="projects__info__button"
-                      onClick={() => this.openProject(p.name, p.url, "yes")}
+                      onClick={() => this.openProject(p.name, p.url, "url")}
                     >
                       {props.language === "PL"
-                        ? "Otwórz projekt"
-                        : "Open project"}
+                        ? "Otwórz projekt na GH pages"
+                        : "Open project via GH pages"}
+                    </button>
+                    <button
+                      className="projects__info__button"
+                      onClick={() => this.openProject(p.name, p.repo, "rep")}
+                    >
+                      {props.language === "PL"
+                        ? "Otwórz repozytorium na GH"
+                        : "Open repository on GH"}
                     </button>
                   </div>
                 ) : (
