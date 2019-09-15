@@ -1,5 +1,5 @@
 #About {
-  margin-top: 25px auto;
+  margin-top: 25px;
   text-align: center;
   .image__about {
     border-radius: 15%;
@@ -16,6 +16,7 @@
     align-items: center;
     p {
       padding: 25px;
+      line-height: 2em;
     }
   }
   .contact__about {

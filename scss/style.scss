@@ -13,13 +13,7 @@ body {
 
 body {
   font-family: "Ubuntu", sans-serif;
-  // background: #fae8be;
-  background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(250, 232, 190, 1) 100%
-  );
+  background: #fae8be;
 }
 
 .wrapper {
@@ -65,20 +59,7 @@ body {
 
 .big__font {
   font-size: 2em;
-  &:hover {
-    animation: movingLetters 1s ease-in-out infinite alternate;
-    cursor: pointer;
-    color: rgba(253, 74, 31, 1);
-  }
-}
-
-@keyframes movingLetters {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.75);
-  }
+  color: #fd4a1f;
 }
 
 @media (max-width: 450px) {
