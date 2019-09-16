@@ -1,3 +1,4 @@
+@import "partials/variables";
 @import "partials/reset";
 @import "partials/header";
 @import "partials/navigation";
@@ -13,7 +14,7 @@ body {
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background: #fae8be;
+  background: $bg-color;
 }
 
 .wrapper {

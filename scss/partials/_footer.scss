@@ -6,9 +6,9 @@ footer {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  background: #311d12;
+  background: $color2;
   min-height: 150px;
-  color: #fae8be;
+  color: $bg-color;
   ul {
     list-style: none;
     display: flex;

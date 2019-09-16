@@ -24,7 +24,7 @@ nav {
     padding: 25px;
     span {
       font-weight: bolder;
-      color: rgba(253, 74, 31, 1);
+      color: $color1-hover;
     } 
   }
   a:visited,
@@ -33,9 +33,9 @@ nav {
   }
   i {
     text-decoration: none;
-    color: rgba(253, 74, 31, 0.4);
+    color: $color1;
     &:hover {
-      color: rgba(253, 74, 31, 1);
+      color: $color1-hover;
       cursor: pointer;
     }
   }
@@ -49,14 +49,31 @@ nav {
 .fa-window-close,
 .fa-bars {
   font-size: 35px;
-  color: rgba(253, 74, 31, 0.4);
+  color: $color1;
   margin: 25px 0;
 }
 
 .fa-window-close:hover,
 .fa-bars:hover {
-  color: rgba(253, 74, 31, 1);
+  color: $color1-hover;
   cursor: grab;
+}
+
+.menu__wrapper i {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  color: $color1;
+  span {
+    opacity: 0;
+    font-size: 0.5em;
+    margin-left: 10px;
+  }
+  &:hover span{
+    color: $color1-hover;
+    opacity: 1;
+    cursor: grab;
+  }
 }
 
 @keyframes visibleNav {
