@@ -64,7 +64,6 @@ class Projects extends Component {
   };
   render() {
     const props = this.props;
-    const vers = this.props.language;
     return (
       <section id="Projects" className="wrapper">
         {Translation.filter(v => v.component === "Projects").map(lang => {
@@ -88,7 +87,7 @@ class Projects extends Component {
                     ).map(lang => {
                       return (
                         <span className="projects__info__description" key={lang}>
-                          {vers === "PL"
+                          {props.language === "PL"
                             ? lang.PL[index + 1]
                             : lang.EN[index + 1]}
                         </span>
@@ -117,7 +116,7 @@ class Projects extends Component {
                     style={{ backgroundImage: `url(${p.image})` }}
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    <span className=" projects__title">
+                    <span className="projects__title">
                       {p.name}
                     </span>
                   </div>
