@@ -58,9 +58,10 @@ class Projects extends Component {
         }, 10000);
       }
     );
-    (url !== '' && open === "url") ? window.open(url) : null;
-    (url !== '' && open === "rep") ? window.open(`https://github.com/KrzGas/${url}`) : null;
-    
+    url !== "" && open === "url" ? window.open(url) : null;
+    url !== "" && open === "rep"
+      ? window.open(`https://github.com/KrzGas/${url}`)
+      : null;
   };
   render() {
     const props = this.props;
@@ -79,20 +80,33 @@ class Projects extends Component {
               <div key={p.name}>
                 {this.state.clickArr.includes(p.name) && this.state.click ? (
                   <div
-                    className={`projects__image projects__info__wrapper`}
+                    className="projects__image projects__info__wrapper"
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    {Translation.filter(
-                      v => v.component === this.constructor.name
-                    ).map(lang => {
+                    {/* {Translation.filter(
+                      v => v.component === "Projects"
+                    ).map((lang,i) => {
                       return (
-                        <span className="projects__info__description" key={lang}>
+                        <span className="projects__info__description" key={i}>
                           {props.language === "PL"
                             ? lang.PL[index + 1]
                             : lang.EN[index + 1]}
                         </span>
                       );
-                    })}
+                    })} */}
+
+                    {Translation.filter(n => n.component === "Projects").map(
+                      l => {
+                        return (
+                          <span className="projects__info__description" key={index+1}>
+                            {props.language === "PL"
+                              ? l.PL[index + 1]
+                              : l.EN[index + 1]}
+                          </span>
+                        );
+                      }
+                    )}
+
                     <button
                       className="projects__info__button"
                       onClick={() => this.openProject(p.name, p.url, "url")}
@@ -116,9 +130,7 @@ class Projects extends Component {
                     style={{ backgroundImage: `url(${p.image})` }}
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    <span className="projects__title">
-                      {p.name}
-                    </span>
+                    <span className="projects__title">{p.name}</span>
                   </div>
                 )}
               </div>
