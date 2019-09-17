@@ -67,11 +67,11 @@ class Navigation extends Component {
           <div className="menu__wrapper" >
           {this.state.swap ? (
             <i className="fas fa-bars" onClick={this.switchMenu}>
-              <span>{vers === "PL" ? 'Schowaj menu' : 'Hide menu'}</span>
+              <span>{vers === "PL" ? 'Pokaż menu' : 'Show menu'}</span>
             </i>
           ) : (
             <i className="far fa-window-close" onClick={this.switchMenu}>
-              <span>{vers === "PL" ? 'Pokaż menu' : 'Show menu'}</span>
+              <span>{vers === "PL" ? 'Schowaj menu' : 'Hide menu'}</span>
               </i>
           )}
           </div>

@@ -61,13 +61,15 @@ nav {
 
 .menu__wrapper i {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-items: center;
   color: $color1;
   span {
     opacity: 0;
     font-size: 0.5em;
-    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+
   }
   &:hover span{
     color: $color1-hover;
