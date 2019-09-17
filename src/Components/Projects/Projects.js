@@ -83,18 +83,6 @@ class Projects extends Component {
                     className="projects__image projects__info__wrapper"
                     onClick={() => this.openProject(p.name, p.url)}
                   >
-                    {/* {Translation.filter(
-                      v => v.component === "Projects"
-                    ).map((lang,i) => {
-                      return (
-                        <span className="projects__info__description" key={i}>
-                          {props.language === "PL"
-                            ? lang.PL[index + 1]
-                            : lang.EN[index + 1]}
-                        </span>
-                      );
-                    })} */}
-
                     {Translation.filter(n => n.component === "Projects").map(
                       l => {
                         return (

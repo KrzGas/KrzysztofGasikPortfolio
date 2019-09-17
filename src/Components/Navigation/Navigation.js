@@ -39,7 +39,7 @@ class Navigation extends Component {
     });
   };
   render() {
-    const vers = this.props.language;
+    const props = this.props;
     return (
       <div className="wrapper__nav">
         <nav className="wrapper">
@@ -54,24 +54,27 @@ class Navigation extends Component {
               className={this.state.swap ? "menu__hidden" : "menu__visible"}
             >
               <i className={item.icon} />
-              {Translation.filter(v => v.component === this.constructor.name).map(lang => {
-                return (
-                  <span key={vers}>
-                    {vers === "PL" ? lang.PL[index] : lang.EN[index]}
-                  </span>
-                );
-                
-              })}
+              {Translation.filter(n => n.component === "Navigation").map(
+                      l => {
+                        return (
+                          <span key={index}>
+                            {props.language === "PL"
+                              ? l.PL[index]
+                              : l.EN[index]}
+                          </span>
+                        );
+                      }
+                    )}  
             </Link>
           ))}
           <div className="menu__wrapper" >
           {this.state.swap ? (
             <i className="fas fa-bars" onClick={this.switchMenu}>
-              <span>{vers === "PL" ? 'Pokaż menu' : 'Show menu'}</span>
+              <span>{props.language === "PL" ? 'Pokaż menu' : 'Show menu'}</span>
             </i>
           ) : (
             <i className="far fa-window-close" onClick={this.switchMenu}>
-              <span>{vers === "PL" ? 'Schowaj menu' : 'Hide menu'}</span>
+              <span>{props.language === "PL" ? 'Schowaj menu' : 'Hide menu'}</span>
               </i>
           )}
           </div>
