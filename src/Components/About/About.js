@@ -45,10 +45,7 @@ class About extends Component {
                 </span>
               )}
             </i>
-            <i
-              className="fas fa-phone-square"
-              onClick={() => this.Show("phone")}
-            >
+            <i className="fas fa-phone-square" onClick={() => this.Show("phone")}>
               {this.state.click && this.state.field.includes("phone") && (
                 <span>+48 506 229 209</span>
               )}

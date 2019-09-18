@@ -17,6 +17,7 @@
       &:hover {
         opacity: 0.60;
         cursor: pointer;
+        animation: stretch 1.5s ease-in-out ;
         &::after {
           background-color: $color1-hover;
         }
@@ -73,5 +74,17 @@
           }
       }
     }
+  }
+}
+
+@keyframes stretch {
+  0% {
+    transform: skew(-15deg);
+  }
+  50% {
+    transform: skew(15deg);
+  }
+  100% {
+    transform: skew(0deg);
   }
 }

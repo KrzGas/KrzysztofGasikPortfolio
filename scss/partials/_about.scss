@@ -36,6 +36,9 @@
       &:hover {
         cursor: pointer;
         color: $color1-hover;
+        a {
+          color: $color1-hover;
+        }
       }
     }
     i.fa-envelope, i.fa-phone-square {
