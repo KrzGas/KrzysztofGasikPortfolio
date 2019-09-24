@@ -32,8 +32,8 @@ body {
   width: 30px;
   height: 30px;
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   border-radius: 5px;
   border: none;
   &:hover {
@@ -48,8 +48,8 @@ body {
 .btn__language {
   border: none;
   position: fixed;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   &:hover {
     cursor: pointer;
   }
@@ -65,6 +65,12 @@ body {
 
 @media (max-width: 450px) {
 
+  .btn__language {
+    img {
+      max-width: 30px;
+    }
+  }
+
   nav {
     flex-flow: column wrap;
   }
@@ -74,7 +80,8 @@ body {
       max-width: 100px;
     }
     .contact__about {
-      i.fa-envelope, i.fa-phone-square {
+      i.fa-envelope,
+      i.fa-phone-square {
         font-size: 30px;
       }
     }
@@ -95,12 +102,12 @@ body {
         width: 250px;
         height: 250px;
       }
-      .projects__title { 
-        font-size:0.85em;
+      .projects__title {
+        font-size: 0.85em;
         top: 87%;
       }
-      .projects__bar:after{
-        top:80%;
+      .projects__bar:after {
+        top: 80%;
       }
     }
   }
@@ -108,20 +115,26 @@ body {
 
 @media (min-width: 450px) and (max-width: 900px) {
 
+  .btn__language {
+    img {
+      max-width: 40px;
+    }
+  }
+
   #Projects {
     .wrapper__image {
       .projects__image {
         width: 300px;
         height: 300px;
-    }
-    .projects__title { 
-      top: 88%;
-    }
-    .projects__bar:after{
-      top:83%;
+      }
+      .projects__title {
+        top: 88%;
+      }
+      .projects__bar:after {
+        top: 83%;
+      }
     }
   }
-}
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
