@@ -64,14 +64,56 @@ body {
 }
 
 @media (max-width: 450px) {
-  header {
-    h1 {
-      font-size: 1.5em;
+  #About {
+    img {
+      max-width: 100px;
+    }
+    .contact__about {
+      i.fa-envelope, i.fa-phone-square {
+        font-size: 30px;
+      }
+    }
+  }
+
+  #Technology {
+    .wrapper__image {
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+  }
+
+  #Projects {
+    .wrapper__image {
+      .projects__image {
+        width: 250px;
+        height: 250px;
+      }
+      .projects__title { 
+        font-size:0.85em;
+        top: 93%;
+      }
+      .projects__bar:after{
+        top:80%;
+      }
     }
   }
 }
 
 @media (min-width: 450px) and (max-width: 900px) {
+
+  #Projects {
+    .wrapper__image {
+      .projects__image {
+        width: 300px;
+        height: 300px;
+    }
+    .projects__bar:after{
+      top:83%;
+    }
+  }
+}
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
