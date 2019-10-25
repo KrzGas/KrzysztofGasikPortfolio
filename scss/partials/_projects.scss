@@ -17,7 +17,6 @@
       &:hover {
         opacity: 0.60;
         cursor: pointer;
-        animation: stretch 1.5s ease-in-out ;
         &::after {
           background-color: $color1-hover;
         }
@@ -60,6 +59,7 @@
           padding: 25px 10px;
           font-weight: bolder;
           text-align: center;
+          animation: curtain 1s linear;
       }
       .projects__info__button {
           border: none;
@@ -67,9 +67,10 @@
           padding: 15px 10px;
           margin-top: 25px;
           font-weight: bolder;
+          animation: curtain 1s linear;
           &:hover {
             background: $color1-hover;
-            color: #000;
+            color: #fff;
             cursor: pointer;
           }
       }
@@ -77,14 +78,14 @@
   }
 }
 
-@keyframes stretch {
+@keyframes curtain {
   0% {
-    transform: skew(-15deg);
+    opacity: 0;
   }
-  50% {
-    transform: skew(15deg);
+  50%{
+    opacity: 0.5;
   }
-  100% {
-    transform: skew(0deg);
+  100%{
+    opacity: 1;
   }
 }

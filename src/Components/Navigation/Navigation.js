@@ -50,7 +50,7 @@ class Navigation extends Component {
               spy={true}
               smooth={true}
               offset={-70}
-              duration={500}
+              duration={1000}
               className={this.state.swap ? "menu__hidden" : "menu__visible"}
             >
               <i className={item.icon} />

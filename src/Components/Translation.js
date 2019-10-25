@@ -20,8 +20,8 @@ const Translation = [
   },
   {
     component: "Projects",
-    PL: ["Moje projekty","Aplikacja do zaplanowania sobie dnia","Aplikacja do oddania niepotrzebnych rzeczy","Aplikacja dla miłośników kotów","Aplikacja dla alergików"],
-    EN: ["My projects","Application for daily planning","An application to give away things","Application for cat lovers","Application checking how strong is pollen"]
+    PL: ["Moje projekty","Aplikacja do zaplanowania sobie dnia","Aplikacja do oddania niepotrzebnych rzeczy","Aplikacja dla miłośników kotów","Aplikacja dla alergików","Prosta galeria ze slider-em"],
+    EN: ["My projects","Application for daily planning","An application to give away things","Application for cat lovers","Application checking how strong is pollen","Simple gallery with slider"]
   },
   {
     component: "Footer",

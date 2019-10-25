@@ -38,7 +38,6 @@ nav {
     &:hover {
       color: $color1-hover;
       cursor: pointer;
-      animation: turnIcon 1.5s linear;
     }
   }
 }
@@ -83,24 +82,20 @@ nav {
 @keyframes visibleNav {
   0% {
     opacity: 0;
-    transform: translateX(-25px);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0px);
   }
 }
 
 @keyframes hiddenNav {
   0% {
     opacity: 1;
-    transform: translateX(0);
   }
 
   100% {
     opacity: 0;
-    transform: translateX(-25px);
   }
 }
 

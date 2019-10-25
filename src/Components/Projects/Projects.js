@@ -4,6 +4,7 @@ import note from "../../../img/note.jpg";
 import things from "../../../img/things.jpg";
 import cat from "../../../img/cat.jpg";
 import pollen from "../../../img/pollen.jpg";
+import gallery from "../../../img/gallery.png";
 
 const projects = [
   {
@@ -33,6 +34,13 @@ const projects = [
     description: "Aplikacja dla alergików",
     image: pollen,
     repo: "PollenAlert"
+  },
+  {
+    name: "Galeria",
+    url: "https://krzgas.github.io/Gallery-with-slider/#/",
+    description: "Prosta galeria ze slider-em",
+    image: gallery,
+    repo: "Gallery-with-slider"
   }
 ];
 
