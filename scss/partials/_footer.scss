@@ -4,58 +4,89 @@ footer {
   padding: 5px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background: $color2;
-  min-height: 150px;
-  color: $bg-color;
-  ul {
-    list-style: none;
+  background: #000000bf;
+  min-height: 30rem;
+  color: #fff;
+  .footer__form {
     display: flex;
-    justify-content: space-around;
-    li {
-      padding: 10px;
-      a:visited,
-      a:link {
-        text-decoration: none;
-        color: #000;
+    flex-flow: column wrap;
+    form {
+      margin: 5px;
+    }
+    label {
+      margin: 15px 10px;
+      font-size: 1.05em;
+    }
+    input,
+    textarea {
+      margin: 15px 10px;
+    }
+    input[type="text"],
+    input[type="mail"],
+    input[type="submit"],
+    textarea {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      font-size: 1.10em;
+      font-weight: bold;
+      border: none;
+      background: rgba(253, 74, 31, 0.6);
+      cursor: pointer;
+      color: #fff;
+      &:hover {
+        background: rgba(253, 74, 31, 1);
+      }
+    }
+    textarea {
+      height: 200%;
+      resize: none;
+    }
+  }
+  .contact__form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-right: 30px;
+    span {
+      font-size: 1.05em;
+    }
+    .contact__icons {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      li {
+        padding: 10px;
+        a:visited,
+        a:link {
+          text-decoration: none;
+          color: #000;
+        }
       }
     }
   }
 }
 
-span {
-  a {
-    color: #000;
-  }
-  a:visited,
-  a:link {
-    text-decoration: none;
-  }
-}
-
-.fa-github:hover {
-  cursor: pointer;
-  color: purple;
-}
-
 .fa-facebook-f,
 .fa-linkedin-in,
-.fa-youtube,
-.fa-twitter,
+.fa-envelope,
 .fa-github {
-  color: #fae8be;
+  color: #fff;
   @media (max-width: 450px) {
     font-size: 15px;
   }
   @media (min-width: 450px) and (max-width: 900px) {
-    font-size: 20px;
-  }
-  @media (min-width: 900px) and (max-width: 1200px) {
     font-size: 25px;
   }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    font-size: 35px;
+  }
   @media (min-width: 1200px) {
-    font-size: 30px;
+    font-size: 45px;
   }
 }
 
@@ -67,10 +98,10 @@ span {
   color: #0077b5;
 }
 
-.fa-youtube:hover {
-  color: #ff0000;
+.fa-envelope:hover {
+  color: #cf5044;
 }
 
-.fa-twitter:hover {
-  color: #1da1f2;
+.fa-github:hover {
+  color: #000;
 }

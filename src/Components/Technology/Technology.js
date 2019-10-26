@@ -1,71 +1,105 @@
 import React, { Component } from "react";
 import Translation from "../Translation";
-import css from "../../../img/css.png";
-import git from "../../../img/git.png";
-import html5 from "../../../img/html5.png";
-import jquery from "../../../img/jquery.png";
-import js from "../../../img/js.png";
-import linux from "../../../img/linux.png";
-import node from "../../../img/node.png";
-import react from "../../../img/react.png";
-import sass from "../../../img/sass.png";
 
 const icons = [
   {
-    name: 'css',
-    source: css
+    name: "css",
+    source: "fab fa-css3-alt",
+    hover: "Dobrze"
   },
   {
-    name: 'git',
-    source: git
+    name: "git",
+    source: "fab fa-git",
+    hover: "Dobrze"
   },
   {
-    name: 'html5',
-    source: html5
+    name: "html5",
+    source: "fab fa-html5",
+    hover: "Dobrze"
   },
   {
-    name: 'jquery',
-    source: jquery
+    name: "js",
+    source: "fab fa-js",
+    hover: "Dobrze"
   },
   {
-    name: 'js',
-    source: js
+    name: "linux",
+    source: "fab fa-linux",
+    hover: "Średnio"
   },
   {
-    name: 'linux',
-    source: linux
+    name: "node",
+    source: "fab fa-node-js",
+    hover: "Średnio"
   },
   {
-    name: 'node',
-    source: node
+    name: "react",
+    source: "fab fa-react",
+    hover: "Średnio"
   },
   {
-    name: 'react',
-    source: react
+    name: "sass",
+    source: "fab fa-sass",
+    hover: "Dobrze"
   },
   {
-    name: 'sass',
-    source: sass
+    name: "npm",
+    source: "fab fa-npm",
+    hover: "Średnio"
   },
+  {
+    name: "rwd",
+    source: "fas fa-tablet-alt",
+    hover: "Dobrze"
+  },
+  {
+    name: "jquery",
+    source: "fab fa-js-square",
+    hover: "Dobrze"
+  }
 ];
 
-const Technology = (props) => {
-  return (
-    <section id="Technology" className='wrapper'>
-      {Translation.filter(v => v.component === "Technology").map(
-            lang => {
-              return <h1 className="big__font" key={props.language}>{props.language === "PL" ? lang.PL : lang.EN}</h1>;
-            }
-          )}
-      <div className="wrapper__image">
-      {
-        icons.map((icon)=> {
-          return <img key={icon.source} src={icon.source} />;
-        })
-      }
-      </div>
-    </section>
-  );
-};
+class Technology extends Component {
+  render() {
+    const props = this.props;
+    const language= this.props.language;
+    return (
+      <section id="Technology" className="wrapper">
+        {Translation.filter(v => v.component === "Technology").map(lang => {
+          return (
+            <h1 className="big__font" key={language}>
+              {language === "PL" ? lang.PL[0] : lang.EN[0]}
+            </h1>
+          );
+        })}
+        <div className="wrapper__image">
+          {icons.map((icon,index) => {
+            return (
+              <div
+                className="technology__icon"
+                key={icon.source}
+                id={icon.name}
+              >
+                <span className="technology__icon__title">{icon.name}</span>
+                <i className={icon.source} />
+                {Translation.filter(n => n.component === "Technology").map(
+                  l => {
+                    return (
+                      <span className="tooltip" key={l}>
+                        {props.language === "PL"
+                          ? l.PL[index + 1]
+                          : l.EN[index + 1]}
+                      </span>
+                    );
+                  }
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
+  }
+}
 
 export { Technology };

@@ -7,6 +7,14 @@
 @import "partials/projects";
 @import "partials/footer";
 
+html {
+  background: url("../img/bg1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 html,
 body {
   height: 100%;
@@ -14,7 +22,6 @@ body {
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background: $bg-color;
 }
 
 .wrapper {
@@ -64,7 +71,6 @@ body {
 }
 
 @media (max-width: 450px) {
-
   .btn__language {
     img {
       max-width: 30px;
@@ -107,10 +113,15 @@ body {
       }
     }
   }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 450px) and (max-width: 900px) {
-
   .btn__language {
     img {
       max-width: 40px;
@@ -131,9 +142,22 @@ body {
       }
     }
   }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
 }
 
 @media (min-width: 1200px) {

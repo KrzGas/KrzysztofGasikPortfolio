@@ -1,56 +1,55 @@
 import React, { Component } from "react";
 import Translation from "../Translation";
 
-const socialMediaElements = [
+const contact = [
   {
     name: "fb",
     icon: "fab fa-facebook-f",
-    href: "https://en-us.facebook.com/"
+    href: "https://www.facebook.com/krzysztof.gasik"
   },
   {
     name: "linkedin",
     icon: "fab fa-linkedin-in",
-    href: "https://pl.linkedin.com/"
+    href: "linkedin.com/in/krzysztof-gasik"
   },
   {
-    name: "youtube",
-    icon: "fab fa-youtube",
-    href: "https://www.youtube.com/"
+    name: "github",
+    icon: "fab fa-github",
+    href: "https://github.com/KrzGas"
   },
   {
-    name: "twitter",
-    icon: "fab fa-twitter",
-    href: "https://twitter.com/"
+    name: "mail",
+    icon: "fab far fa-envelope",
+    href: "mailto:kgasik@gmail.com"
   }
 ];
 
 export const Footer = props => {
   return (
     <footer id="Footer">
+      <div className='footer__form'>
+      <form>
+          <label>Imię</label>
+          <input type='text' id="name" required placeholder="imię"/>
+          <label>Mail</label>
+          <input type='mail' id="mail" required placeholder="e-mail"/>
+          <label>Napisz do mnie</label>
+          <textarea id="message" placeholder="Wiadomość do mnie"></textarea>
+          <input type="submit" value="Wyślij" />
+      </form>
+      </div>
+      <div className='contact__form'>
       <span>
-        {Translation.filter(v => v.component === "Footer").map(lang => {
+      {Translation.filter(v => v.component === "Footer").map(lang => {
           return (
             <span key={props.language}>
               Krzysztof Gasik &copy; 2019 {props.language === "PL" ? lang.PL[0] : lang.EN[0]}
             </span>
           );
         })}
-        <a href="https://github.com/KrzGas" target="_blank">
-          <i className="fab fa-github" />
-        </a>
-        &#160;&#160;{Translation.filter(v => v.component === "Footer").map(lang => {
-          return (
-            <span key={props.language}>
-              {props.language === "PL" ? lang.PL[1] : lang.EN[1]}
-            </span>
-          );
-        })}&#160;&#160;
-        <a href="https://linkedin.com/in/krzysztof-gasik" target="_blank">
-          <i className="fab fa-linkedin-in" id="linked" />
-        </a>
       </span>
-      <ul>
-        {socialMediaElements.map(item => (
+      <ul className = "contact__icons">
+        {contact.map(item => (
           <li key={item.name}>
             <a href={item.href} target="_blank">
               <i className={item.icon} />
@@ -58,6 +57,7 @@ export const Footer = props => {
           </li>
         ))}
       </ul>
+      </div>
     </footer>
   );
 };

@@ -15,8 +15,8 @@ const Translation = [
   },
   {
     component: "Technology",
-    PL: "Co już znam",
-    EN: "What I know?"
+    PL: ["Co już znam", "Dobrze","Dobrze","Dobrze","Dobrze","Średnio","Średnio","Średnio","Dobrze","Średnio","Dobrze","Dobrze"],
+    EN: ["What I know?", "Well", "Well", "Well", "Well", "Average", "Average", "Average", "Well", "Average", "Well", "Well"]
   },
   {
     component: "Projects",
@@ -25,8 +25,8 @@ const Translation = [
   },
   {
     component: "Footer",
-    PL: ["szukaj mnie na ","lub"],
-    EN: ["find me on ","or"]
+    PL: ["Skontaktuj się ze mną"],
+    EN: ["Contact with me"]
   }
 ];
 

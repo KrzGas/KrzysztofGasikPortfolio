@@ -6,14 +6,42 @@
   .wrapper__image {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 25px 0;
-    min-height: 200px;
-    img {
-      max-width: 150px;
-      max-height: 150px;
-      margin: 10px;
+    .technology__icon {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      .technology__icon__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .tooltip {
+        opacity: 0;
+        transition: opacity 0.5s;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color1-hover;
+      }
+      i {
+        font-size: 7em;
+        margin: 25px;
+        &:hover {
+          cursor: pointer;
+        }
+        &::before {
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      &:hover .tooltip {
+        opacity: 1;
+      }
+      &:hover i::before {
+        color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 }

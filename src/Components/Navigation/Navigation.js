@@ -21,7 +21,7 @@ const MenuElements = [
   {
     path: "Footer",
     name: "Kontakt",
-    icon: "far fa-envelope"
+    icon: "far fa-user"
   }
 ];
 
@@ -49,8 +49,8 @@ class Navigation extends Component {
               to={item.path}
               spy={true}
               smooth={true}
-              offset={-70}
-              duration={1000}
+              offset={-50}
+              duration={450}
               className={this.state.swap ? "menu__hidden" : "menu__visible"}
             >
               <i className={item.icon} />

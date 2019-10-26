@@ -59,7 +59,7 @@
           padding: 25px 10px;
           font-weight: bolder;
           text-align: center;
-          animation: curtain 1s linear;
+          animation: curtain 0.3s ease-in;
       }
       .projects__info__button {
           border: none;
@@ -67,7 +67,7 @@
           padding: 15px 10px;
           margin-top: 25px;
           font-weight: bolder;
-          animation: curtain 1s linear;
+          animation: curtain 0.3s ease-in;
           &:hover {
             background: $color1-hover;
             color: #fff;
@@ -81,11 +81,14 @@
 @keyframes curtain {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   50%{
     opacity: 0.5;
+    transform: translateY(-10px);
   }
   100%{
     opacity: 1;
+    transform: translateY(0px);
   }
 }
