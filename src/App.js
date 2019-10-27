@@ -17,9 +17,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: "PL"
+      lang: "PL",
+      click: 2
     };
   }
+
+  updateClick = click => {
+    this.setState({
+      click: click
+    });
+  };
 
   Language = () => {
     this.setState({
@@ -39,8 +46,8 @@ class App extends Component {
           <button className="btn__language" onClick={this.Language}>
              {this.state.lang === "PL" ? <img src={english} /> : <img src={polish} />}
           </button>
-          <Header language={this.state.lang}/>
-          <Navigation language={this.state.lang}/> 
+          <Header language={this.state.lang} info={this.state.click}/>
+          <Navigation language={this.state.lang} click={click => this.updateClick(click)}/> 
           <About language={this.state.lang}/>
           <Technology language={this.state.lang}/>
           <Projects language={this.state.lang}/>

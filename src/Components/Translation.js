@@ -1,5 +1,10 @@
 const Translation = [
   {
+    component:"Header",
+    PL: [],
+    EN: []
+  },
+  {
     component: "About",
     PL: [`Coś o mnie`,`Od czasu studiów interesowałem się tworzeniem stron internetowych (html i css). W mojej obecnej pracy wykorzystywałem umiejętności i wiedzę zdobytą na kursie w Coders Lab aby wspomagać działanie ankiet w
                 badaniach internetowych. Praca jako web developer jest dla mnie kolejnym
@@ -25,8 +30,8 @@ const Translation = [
   },
   {
     component: "Footer",
-    PL: ["Skontaktuj się ze mną"],
-    EN: ["Contact with me"]
+    PL: ["Skontaktuj się ze mną", "Imię", "Wiadomość do mnie", "Wyślij"],
+    EN: ["Contact with me", "Name", "Message to me", "Send"]
   }
 ];
 

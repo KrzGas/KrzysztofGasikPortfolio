@@ -28,16 +28,26 @@ export const Footer = props => {
   return (
     <footer id="Footer">
       <div className='footer__form'>
-        <h2>Skontaktuj się ze mną</h2>
-      <form>
-          <label>Imię</label>
-          <input type='text' id="name" required placeholder="imię"/>
-          <label>Mail</label>
-          <input type='mail' id="mail" required placeholder="e-mail"/>
-          <label>Napisz do mnie</label>
-          <textarea id="message" placeholder="Wiadomość do mnie"></textarea>
-          <input type="submit" value="Wyślij" />
-      </form>
+      {Translation.filter(v => v.component === "Footer").map(lang => {
+          return (
+            <h2 key={props.language}>
+             {props.language === "PL" ? lang.PL[0] : lang.EN[0]}
+            </h2>
+          );
+        })}
+        {Translation.filter(v => v.component === "Footer").map(lang => {
+            return (
+              <form key={lang}>
+              <label>{props.language === "PL" ? lang.PL[1] : lang.EN[1]}</label>
+              <input type='text' id="name" required placeholder={props.language === "PL" ? lang.PL[1] : lang.EN[1]}/>
+              <label>Mail</label>
+              <input type='mail' id="mail" required placeholder="e-mail"/>
+              <label>{props.language === "PL" ? lang.PL[0] : lang.EN[0]}</label>
+              <textarea id="message" placeholder={props.language === "PL" ? lang.PL[2] : lang.EN[2]}></textarea>
+              <input type="submit" value={props.language === "PL" ? lang.PL[3] : lang.EN[3]} />
+              </form>
+            );
+          })}
       </div>
       <div className='contact__form'>
       {Translation.filter(v => v.component === "Footer").map(lang => {
