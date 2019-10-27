@@ -19,8 +19,8 @@ nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    border-radius: 5px;
-    padding: 10px 50px;
+    border-radius: 0.3125em;
+    padding: 0.625em 3.125em;
     span {
       font-weight: bolder;
       font-size: 1.25em;
@@ -39,8 +39,8 @@ nav {
 
 .menu__wrapper {
   position: fixed;
-  right: 10px;
-  top: 30px;
+  right: 0.625em;
+  top: -3.5em;
   i {
     display: flex;
     flex-flow: column wrap;
@@ -50,8 +50,8 @@ nav {
 
 .fa-window-close,
 .fa-bars {
-  font-size: 35px;
-  margin: 25px 0;
+  font-size: 2.1875em;
+  margin: 1.5625em 0;
 }
 
 .fa-bars {
@@ -75,16 +75,16 @@ nav {
 .fa-window-close,
 .fa-bars {
   @media (max-width: 450px) {
-    font-size: 20px;
+    font-size: 1.25em;
   }
   @media (min-width: 450px) and (max-width: 900px) {
-    font-size: 20px;
+    font-size: 1.25em;
   }
   @media (min-width: 900px) and (max-width: 1200px) {
-    font-size: 30px;
+    font-size: 1.875em;
   }
   @media (min-width: 1200px) {
-    font-size: 40px;
+    font-size: 2.5em;
   }
 }
 

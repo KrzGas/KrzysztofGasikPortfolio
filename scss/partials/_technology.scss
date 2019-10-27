@@ -1,5 +1,5 @@
 #Technology {
-  margin-top: 25px;
+  margin-top: 1.5625em;
   h1 {
     text-align: center;
   }
@@ -8,28 +8,28 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 0;
+    margin: 1.5625em 0;
     .technology__icon {
       display: flex;
       flex-flow: column wrap;
       align-items: center;
-      padding: 30px;
+      padding: 1.875em;
       .technology__icon__title {
         text-transform: uppercase;
         font-weight: bold;
-        margin-top: 15px;
+        margin-top: 0.9375em;
       }
       .tooltip {
         opacity: 0;
         transition: opacity 0.5s;
-        margin-bottom: 5px;
+        margin-bottom: 0.3125em;
         text-transform: uppercase;
         font-weight: bold;
         color: $color3-hover;
       }
       i {
         font-size: 7em;
-        margin: 25px;
+        margin: 1.5625em;
         &:hover {
           cursor: pointer;
         }
