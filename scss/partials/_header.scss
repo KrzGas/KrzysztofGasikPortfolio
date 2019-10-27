@@ -11,4 +11,21 @@ header {
   h1 {
     text-align: center;
   }
+  .title__show {
+    animation: show .7s ease;
+    opacity: 1;
+    
+  }
+  .title__hide {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }

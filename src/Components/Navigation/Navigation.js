@@ -25,7 +25,7 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      swap: true
+      swap: false
     };
   }
 
@@ -34,44 +34,28 @@ class Navigation extends Component {
       swap: !this.state.swap
     });
   };
+
   render() {
     const props = this.props;
     return (
       <>
-      <div className={`wrapper__nav ${this.state.swap ? 'menu__visible__curtain' : ""}`}>
-        <nav style={this.state.swap ? {display: 'flex'} : {display: 'none'}}>
+      {this.state.swap ? null :
+      <div className='menu__visible__curtain'>
+        <nav>
           {MenuElements.map((item,index) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={450}
-            >
+            <Link key={item.name} to={item.path} spy={true} smooth={true}offset={-50} duration={450}>
               {Translation.filter(n => n.component === "Navigation").map(
-                      l => {
-                        return (
-                          <span key={index}>
-                            {props.language === "PL"
-                              ? l.PL[index]
-                              : l.EN[index]}
-                          </span>
-                        );
-                      }
-                    )}  
+                l => {return (<span key={index}>{props.language === "PL"? l.PL[index]: l.EN[index]}</span>);})}  
             </Link>
           ))}
-          
         </nav>
       </div>
-      <div className="menu__wrapper" >
+       }
+      <div className="menu__wrapper">
       {this.state.swap ? (
-        <i className="fas fa-bars" onClick={()=>this.switchMenu(this.props.click(1))}>
-        </i>
+        <i className="far fa-window-close" onClick={()=>this.switchMenu(this.props.click(2))}/>
       ) : (
-        <i className="far fa-window-close" onClick={()=>this.switchMenu(this.props.click(2))}>
-          </i>
+        <i className="fas fa-bars" onClick={()=>this.switchMenu(this.props.click(1))} />
       )}
       </div>
       </>

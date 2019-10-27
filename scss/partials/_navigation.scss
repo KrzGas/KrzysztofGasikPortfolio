@@ -5,10 +5,12 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.55);
   animation: menuSlideDown 0.25s ease-in;
-  min-height: 10rem;
+  min-height: 7rem;
   opacity: 1;
   position: fixed;
   top:0;
+  display: flex;
+  justify-content: center;
 }
 nav {
   display: flex;

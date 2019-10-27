@@ -4,7 +4,7 @@ const Header = (props) => {
   const click = props.info;
   return (
     <header id="Header">
-      <h1>{click > 1 ? null : 'Junior Frontend Developer'}</h1>
+      <h1 className={click > 1 ? "title__hide" : "title__show"}>Junior Frontend Developer</h1>
     </header>
   );
 };
