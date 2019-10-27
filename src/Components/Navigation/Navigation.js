@@ -5,23 +5,19 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const MenuElements = [
   {
     path: "About",
-    name: "O mnie",
-    icon: "far fa-address-card"
+    name: "O mnie"
   },
   {
     path: "Technology",
-    name: "Technologie",
-    icon: "fab fa-html5"
+    name: "Technologie"
   },
   {
     path: "Projects",
-    name: "Projekty",
-    icon: "far fa-folder-open"
+    name: "Projekty"
   },
   {
     path: "Footer",
-    name: "Kontakt",
-    icon: "far fa-user"
+    name: "Kontakt"
   }
 ];
 
@@ -41,8 +37,9 @@ class Navigation extends Component {
   render() {
     const props = this.props;
     return (
-      <div className="wrapper__nav">
-        <nav className="wrapper">
+      <>
+      <div className={`wrapper__nav ${this.state.swap ? 'menu__visible__curtain' : 'menu__hidden__curtain'}`}>
+        <nav>
           {MenuElements.map((item,index) => (
             <Link
               key={item.name}
@@ -51,9 +48,8 @@ class Navigation extends Component {
               smooth={true}
               offset={-50}
               duration={450}
-              className={this.state.swap ? "menu__hidden" : "menu__visible"}
+              className={this.state.swap ? "menu__visible" : "menu__hidden"}
             >
-              <i className={item.icon} />
               {Translation.filter(n => n.component === "Navigation").map(
                       l => {
                         return (
@@ -67,19 +63,19 @@ class Navigation extends Component {
                     )}  
             </Link>
           ))}
-          <div className="menu__wrapper" >
-          {this.state.swap ? (
-            <i className="fas fa-bars" onClick={this.switchMenu}>
-              <span>{props.language === "PL" ? 'Pokaż menu' : 'Show menu'}</span>
-            </i>
-          ) : (
-            <i className="far fa-window-close" onClick={this.switchMenu}>
-              <span>{props.language === "PL" ? 'Schowaj menu' : 'Hide menu'}</span>
-              </i>
-          )}
-          </div>
+          
         </nav>
       </div>
+      <div className="menu__wrapper" >
+      {this.state.swap ? (
+        <i className="fas fa-bars" onClick={this.switchMenu}>
+        </i>
+      ) : (
+        <i className="far fa-window-close" onClick={this.switchMenu}>
+          </i>
+      )}
+      </div>
+      </>
     );
   }
 }

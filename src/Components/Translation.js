@@ -15,8 +15,8 @@ const Translation = [
   },
   {
     component: "Technology",
-    PL: ["Co już znam", "Dobrze","Dobrze","Dobrze","Dobrze","Średnio","Średnio","Średnio","Dobrze","Średnio","Dobrze","Dobrze"],
-    EN: ["What I know?", "Well", "Well", "Well", "Well", "Average", "Average", "Average", "Well", "Average", "Well", "Well"]
+    PL: ["Co już znam", "Dobrze","Dobrze","Dobrze","Dobrze","Średnio","Średnio","Średnio","Dobrze","Średnio","Dobrze","Średnio"],
+    EN: ["What I know?", "Well", "Well", "Well", "Well", "Average", "Average", "Average", "Well", "Average", "Well", "Average"]
   },
   {
     component: "Projects",

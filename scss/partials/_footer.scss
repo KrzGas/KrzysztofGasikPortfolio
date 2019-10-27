@@ -4,14 +4,18 @@ footer {
   padding: 5px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: #000000bf;
-  min-height: 30rem;
+  min-height: 50rem;
   color: #fff;
   .footer__form {
     display: flex;
     flex-flow: column wrap;
+    h2 {
+      margin: 15px 10px;
+      text-align: center;
+    }
     form {
       margin: 5px;
     }
@@ -28,18 +32,19 @@ footer {
     input[type="submit"],
     textarea {
       width: 100%;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
     }
     input[type="submit"] {
-      font-size: 1.10em;
+      font-size: 1.1em;
       font-weight: bold;
       border: none;
-      background: rgba(253, 74, 31, 0.6);
+      background: $color3;
       cursor: pointer;
       color: #fff;
       &:hover {
-        background: rgba(253, 74, 31, 1);
+        background: $color3-hover;
       }
     }
     textarea {
@@ -54,6 +59,7 @@ footer {
     margin-right: 30px;
     span {
       font-size: 1.05em;
+      text-align: center;
     }
     .contact__icons {
       list-style: none;
@@ -77,7 +83,7 @@ footer {
 .fa-github {
   color: #fff;
   @media (max-width: 450px) {
-    font-size: 15px;
+    font-size: 25px;
   }
   @media (min-width: 450px) and (max-width: 900px) {
     font-size: 25px;

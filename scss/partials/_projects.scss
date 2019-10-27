@@ -18,7 +18,7 @@
         opacity: 0.60;
         cursor: pointer;
         &::after {
-          background-color: $color1-hover;
+          background-color: $color2-hover;
         }
       }
     }
@@ -69,7 +69,7 @@
           font-weight: bolder;
           animation: curtain 0.3s ease-in;
           &:hover {
-            background: $color1-hover;
+            background: $color3-hover;
             color: #fff;
             cursor: pointer;
           }

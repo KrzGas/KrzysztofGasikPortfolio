@@ -28,6 +28,7 @@ export const Footer = props => {
   return (
     <footer id="Footer">
       <div className='footer__form'>
+        <h2>Skontaktuj się ze mną</h2>
       <form>
           <label>Imię</label>
           <input type='text' id="name" required placeholder="imię"/>
@@ -39,7 +40,6 @@ export const Footer = props => {
       </form>
       </div>
       <div className='contact__form'>
-      <span>
       {Translation.filter(v => v.component === "Footer").map(lang => {
           return (
             <span key={props.language}>
@@ -47,7 +47,6 @@ export const Footer = props => {
             </span>
           );
         })}
-      </span>
       <ul className = "contact__icons">
         {contact.map(item => (
           <li key={item.name}>

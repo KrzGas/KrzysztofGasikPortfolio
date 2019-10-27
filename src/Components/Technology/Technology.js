@@ -53,9 +53,9 @@ const icons = [
     hover: "Dobrze"
   },
   {
-    name: "jquery",
-    source: "fab fa-js-square",
-    hover: "Dobrze"
+    name: "gulp",
+    source: "fab fa-gulp",
+    hover: "Średnio"
   }
 ];
 
@@ -80,7 +80,7 @@ class Technology extends Component {
                 key={icon.source}
                 id={icon.name}
               >
-                <span className="technology__icon__title">{icon.name}</span>
+                <p className="technology__icon__title">{icon.name === "js" ? icon.name+` (ES6 + jQuery)`: icon.name}</p>
                 <i className={icon.source} />
                 {Translation.filter(n => n.component === "Technology").map(
                   l => {

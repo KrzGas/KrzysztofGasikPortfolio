@@ -18,6 +18,8 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -67,10 +69,83 @@ body {
 
 .big__font {
   font-size: 2em;
-  color: #fd4a1f;
+  color: $color3-hover;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 425px) {
+  nav a {
+    padding: 5px 10px;
+    span {
+      font-size: 0.65em;
+    }
+  }
+
+  .btn__language {
+    img {
+      max-width: 20px;
+    }
+  }
+
+  #About {
+    img {
+      max-width: 40px;
+    }
+    p {
+      font-size: 0.7em;
+    }
+    .wrapper__about {
+      flex-flow: column wrap;
+      align-items: center;
+    }
+  }
+
+  #Technology {
+    .wrapper__image {
+     .technology__icon {
+       padding: 0;
+       margin: 0 auto;
+     }
+    }
+  }
+
+  #Projects {
+    .wrapper__image {
+      .projects__image {
+        width: 250px;
+        height: 250px;
+      }
+      .projects__title {
+        font-size: 0.85em;
+        top: 87%;
+      }
+      .projects__bar:after {
+        top: 80%;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .footer__form form input {
+      margin: 5px;
+    }
+    .footer__form form textarea {
+      margin: 5px;
+    }
+  }
+
+}
+
+@media (min-width: 425px) and (max-width: 450px) {
+  nav a {
+    padding: 5px 20px;
+    span {
+      font-size: 0.75em;
+    }
+  }
+
   .btn__language {
     img {
       max-width: 30px;
@@ -79,21 +154,22 @@ body {
 
   #About {
     img {
-      max-width: 100px;
+      max-width: 50px;
     }
-    .contact__about {
-      i.fa-envelope,
-      i.fa-phone-square {
-        font-size: 30px;
-      }
+    p {
+      font-size: 0.7em;
+    }
+    .wrapper__about {
+      flex-flow: column wrap;
+      align-items: center;
     }
   }
 
   #Technology {
     .wrapper__image {
-      img {
-        max-width: 100px;
-        max-height: 100px;
+      .technology__icon {
+        padding: 0;
+        margin: 0 auto;
       }
     }
   }
@@ -118,6 +194,12 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    .footer__form form input {
+      margin: 5px;
+    }
+    .footer__form form textarea {
+      margin: 5px;
+    }
   }
 }
 
@@ -126,6 +208,10 @@ body {
     img {
       max-width: 40px;
     }
+  }
+
+  nav a span {
+    font-size: 1em;
   }
 
   #Projects {
@@ -147,17 +233,21 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    .footer__form form input {
+      margin: 5px;
+    }
+    .footer__form form textarea {
+      margin: 5px;
+    }
   }
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
-
   footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
   }
-
 }
 
 @media (min-width: 1200px) {
