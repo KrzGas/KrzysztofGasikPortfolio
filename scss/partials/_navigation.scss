@@ -8,11 +8,7 @@
   min-height: 10rem;
   opacity: 1;
   position: fixed;
-  top: 0;
-}
-.menu__hidden__curtain {
-  opacity: 0;
-  animation: menuSlideUp 0.25s ease-in;
+  top:0;
 }
 nav {
   display: flex;

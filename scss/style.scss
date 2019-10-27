@@ -22,8 +22,9 @@ body {
 }
 
 body {
-  font-family: "Courgette", cursive;
+  font-family: 'Arial';
   font-size: 1.2em;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -32,7 +33,7 @@ body {
 }
 
 #app {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .scrollTop {

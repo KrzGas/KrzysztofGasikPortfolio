@@ -38,8 +38,8 @@ class Navigation extends Component {
     const props = this.props;
     return (
       <>
-      <div className={`wrapper__nav ${this.state.swap ? 'menu__visible__curtain' : 'menu__hidden__curtain'}`}>
-        <nav>
+      <div className={`wrapper__nav ${this.state.swap ? 'menu__visible__curtain' : ""}`}>
+        <nav style={this.state.swap ? {display: 'flex'} : {display: 'none'}}>
           {MenuElements.map((item,index) => (
             <Link
               key={item.name}
