@@ -19,11 +19,11 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
+  // font-family: "Ubuntu", sans-serif;
+  font-family: 'Courgette', cursive;
 }
 
 .wrapper {
@@ -73,6 +73,15 @@ body {
 }
 
 @media (max-width: 425px) {
+
+  .menu__visible__curtain {
+    min-height: 5rem;
+  }
+
+  .menu__wrapper {
+    top: 5px;
+  }
+
   nav a {
     padding: 5px 10px;
     span {
@@ -139,6 +148,15 @@ body {
 }
 
 @media (min-width: 425px) and (max-width: 450px) {
+
+  .menu__visible__curtain {
+    min-height: 5rem;
+  }
+
+  .menu__wrapper {
+    top: 5px;
+  }
+
   nav a {
     padding: 5px 20px;
     span {
@@ -204,6 +222,14 @@ body {
 }
 
 @media (min-width: 450px) and (max-width: 900px) {
+  .menu__visible__curtain {
+    min-height: 7rem;
+  }
+
+  .menu__wrapper {
+    top: 20px;
+  }
+
   .btn__language {
     img {
       max-width: 40px;
@@ -229,9 +255,9 @@ body {
     }
   }
 
-  footer {
+  footer#Footer {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     .footer__form form input {
       margin: 5px;
@@ -243,12 +269,18 @@ body {
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
-  footer {
+  footer#Footer {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
   }
 }
 
 @media (min-width: 1200px) {
+  footer#Footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 }

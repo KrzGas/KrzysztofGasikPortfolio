@@ -25,7 +25,7 @@ class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      swap: false
+      swap: true
     };
   }
 
@@ -48,7 +48,6 @@ class Navigation extends Component {
               smooth={true}
               offset={-50}
               duration={450}
-              className={this.state.swap ? "menu__visible" : "menu__hidden"}
             >
               {Translation.filter(n => n.component === "Navigation").map(
                       l => {
