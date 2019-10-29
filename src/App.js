@@ -47,7 +47,7 @@ class App extends Component {
              {this.state.lang === "PL" ? <img src={english} /> : <img src={polish} />}
           </button>
           <Header language={this.state.lang} info={this.state.click}/>
-          <Navigation language={this.state.lang} click={click => this.updateClick(click)}/> 
+          {/* <Navigation language={this.state.lang} click={click => this.updateClick(click)}/>  */}
           <About language={this.state.lang}/>
           <Technology language={this.state.lang}/>
           <Projects language={this.state.lang}/>

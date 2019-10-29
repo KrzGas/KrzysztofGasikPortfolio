@@ -57,20 +57,20 @@ nav {
 }
 
 .fa-bars {
-  color: $color1;
+  color: $color2;
 }
 
 .fa-bars:hover {
-  color: $color1-hover;
+  color: $color2-hover;
   cursor: grab;
 }
 
 .fa-window-close {
-  color: $color2;
+  color: $color1;
 }
 
 .fa-window-close:hover {
-  color: $color2-hover;
+  color: $color1-hover;
   cursor: grab;
 }
 
