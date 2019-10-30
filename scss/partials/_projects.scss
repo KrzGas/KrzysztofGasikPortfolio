@@ -15,7 +15,7 @@
       background-repeat: no-repeat;
       margin: 1.25em;
       &:hover {
-        opacity: 0.75;
+        opacity: 0.8;
         cursor: pointer;
         &::after {
           background-color: $color3-hover;
