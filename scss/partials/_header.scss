@@ -12,12 +12,7 @@ header {
     text-align: center;
   }
   .title__show {
-    animation: show .7s ease;
-    opacity: 1;
-    
-  }
-  .title__hide {
-    opacity: 0;
+    animation: show 1s ease-in;
   }
 }
 

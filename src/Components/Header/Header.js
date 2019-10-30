@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 
-const Header = (props) => {
-  const click = props.info;
+const Header = () => {
   return (
     <header id="Header">
-      <h1 className={click > 1 ? "title__hide" : "title__show"}>Junior Frontend Developer</h1>
+      <h1 className="title__show">Junior Frontend Developer</h1>
     </header>
   );
 };

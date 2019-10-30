@@ -52,9 +52,9 @@ class Navigation extends Component {
       </div>
       <div className="menu__wrapper">
       {this.state.swap ? (
-        <i className="fas fa-bars" onClick={()=>this.switchMenu(this.props.click(2))}/>
+        <i className="fas fa-bars" onClick={this.switchMenu}/>
       ) : (
-        <i className="far fa-window-close" onClick={()=>this.switchMenu(this.props.click(1))} />
+        <i className="far fa-window-close" onClick={this.switchMenu}/>
       )}
       </div>
       </>
