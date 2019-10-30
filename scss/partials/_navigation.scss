@@ -1,16 +1,21 @@
 .wrapper__nav {
   display: flex;
 }
-.menu__visible__curtain {
+.menu__visible__curtain, .menu__hidden__curtain {
   width: 100%;
   background: rgba(0, 0, 0, 0.55);
-  animation: menuSlideDown 0.25s ease-in;
-  min-height: 7em;
-  opacity: 1;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
+}
+.menu__visible__curtain {
+  animation: menuSlideLeft .25s ease-in;
+  opacity: 1;
+}
+.menu__hidden__curtain {
+  animation: menuSlideRight .25s ease-in;
+  opacity: 0;
 }
 nav {
   display: flex;
@@ -25,7 +30,6 @@ nav {
     padding: 0.625em 3.125em;
     span {
       font-weight: bolder;
-      font-size: 1.25em;
       color: #fff;
     }
   }
@@ -42,7 +46,7 @@ nav {
 .menu__wrapper {
   position: fixed;
   right: 0.625em;
-  top: -3.5em;
+  top: -4em;
   i {
     display: flex;
     flex-flow: column wrap;
@@ -91,24 +95,24 @@ nav {
   }
 }
 
-@keyframes menuSlideDown {
+@keyframes menuSlideLeft {
   from {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateX(-120%);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes menuSlideUp {
+@keyframes menuSlideRight {
   from {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   to {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateX(-120%);
   }
 }

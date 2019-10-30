@@ -7,35 +7,43 @@
 @import "partials/projects";
 @import "partials/footer";
 
-@media (max-width: 600px) {
-  html {
-    background: url("../img/bg1.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-  }
-}
+// @media (max-width: 600px) {
+//   html {
+//     background: url("../img/bg1.jpg") no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     height: 100vh;
+//     width: 100vw;
+//   }
+// }
 
-@media (min-width: 600px) {
-  html {
-    background: url("../img/bg2.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-  }
-}
+// @media (min-width: 600px) {
+//   html {
+//     background: url("../img/bg2.jpg") no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
+//     height: 100vh;
+//     width: 100vw;
+//   }
+// }
 
 html,
 body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+      13deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(98, 98, 220, 1) 4%,
+      rgba(7, 190, 227, 1) 100%
+    )
+    no-repeat center center fixed;
 }
 
 body {
@@ -91,7 +99,7 @@ body {
   }
 
   .menu__wrapper {
-    top: -1.5em;
+    top: -0.65em;
   }
 
   nav a {
@@ -171,13 +179,13 @@ body {
   }
 
   .menu__wrapper {
-    top: -1.5em;
+    top: -0.5em;
   }
 
   nav a {
     padding: 0.3125em 1.25em;
     span {
-      font-size: 0.75em;
+      font-size: 0.55em;
     }
   }
 
@@ -248,7 +256,7 @@ body {
   }
 
   .menu__wrapper {
-    top: -1.5em;
+    top: 0.35em;
   }
 
   .btn__language {
@@ -306,6 +314,9 @@ body {
 }
 
 @media (min-width: 900px) and (max-width: 1200px) {
+  .menu__wrapper {
+    top: -2.65em;
+  }
   #Technology {
     .wrapper__image {
       .technology__icon {

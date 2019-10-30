@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,Fragment } from "react";
 import Translation from "../Translation";
 
 const contact = [
@@ -30,14 +30,14 @@ export const Footer = props => {
       <div className='footer__form'>
       {Translation.filter(v => v.component === "Footer").map(lang => {
           return (
-            <>
-            <h2 key={props.language}>
+            <Fragment key={props.language}>
+            <h2 >
              {props.language === "PL" ? lang.PL[0] : lang.EN[0]}
             </h2>
             <h3>
               {props.language === "PL" ? lang.PL[1] : lang.EN[1]}
             </h3>
-            </>
+            </Fragment>
           );
         })}
         {Translation.filter(v => v.component === "Footer").map(lang => {

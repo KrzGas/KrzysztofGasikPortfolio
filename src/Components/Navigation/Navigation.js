@@ -39,8 +39,8 @@ class Navigation extends Component {
     const props = this.props;
     return (
       <>
-      {this.state.swap ? null :
-      <div className='menu__visible__curtain'>
+       :
+      <div className={this.state.swap ? 'menu__hidden__curtain' : 'menu__visible__curtain'}>
         <nav>
           {MenuElements.map((item,index) => (
             <Link key={item.name} to={item.path} spy={true} smooth={true}offset={-50} duration={450}>
@@ -50,7 +50,6 @@ class Navigation extends Component {
           ))}
         </nav>
       </div>
-       }
       <div className="menu__wrapper">
       {this.state.swap ? (
         <i className="fas fa-bars" onClick={()=>this.switchMenu(this.props.click(2))}/>
