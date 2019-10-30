@@ -5,10 +5,10 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.55);
   animation: menuSlideDown 0.25s ease-in;
-  min-height: 7rem;
+  min-height: 7em;
   opacity: 1;
   position: fixed;
-  top:0;
+  top: 0;
   display: flex;
   justify-content: center;
 }
@@ -58,6 +58,7 @@ nav {
 
 .fa-bars {
   color: $color2;
+  
 }
 
 .fa-bars:hover {

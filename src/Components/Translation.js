@@ -30,8 +30,8 @@ const Translation = [
   },
   {
     component: "Footer",
-    PL: ["Skontaktuj się ze mną", "Imię", "Wiadomość do mnie", "Wyślij"],
-    EN: ["Contact with me", "Name", "Message to me", "Send"]
+    PL: ["Kontakt", "Możesz skontaktować się ze mną poprzez formularz lub poprzez kliknięcie w jedną ikonek", "Imię", "Wiadomość", "Wyślij",],
+    EN: ["Get in touch", "You can contact with me using below form or by clicking on social media icons", "Name", "Message", "Send"]
   }
 ];
 
