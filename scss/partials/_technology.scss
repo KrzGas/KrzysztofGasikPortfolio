@@ -17,12 +17,13 @@
       .technology__icon__title {
         text-transform: uppercase;
         font-weight: bold;
-        margin-top: 0.9375em;
+        margin-bottom: 0.5em;
+        text-align: center;
+        color: $color2-hover;
       }
       .tooltip {
         opacity: 0;
         transition: opacity 0.5s;
-        margin-bottom: 0.3125em;
         text-transform: uppercase;
         font-weight: bold;
         color: $color3-hover;

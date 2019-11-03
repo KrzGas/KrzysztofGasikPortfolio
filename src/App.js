@@ -41,7 +41,7 @@ class App extends Component {
       <>
         <HashRouter>
           <button className="btn__language" onClick={this.Language}>
-            {this.state.lang === "PL" ? (<img src={english} />) : (<img src={polish} />)}
+            {this.state.lang === "PL" ? <img src={english} /> : <img src={polish} />}
           </button>
           <Header language={this.state.lang} />
           <Navigation language={this.state.lang} />

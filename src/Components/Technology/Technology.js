@@ -80,12 +80,15 @@ class Technology extends Component {
                 key={icon.source}
                 id={icon.name}
               >
-                <p className="technology__icon__title">{icon.name === "js" ? icon.name+` (ES6 + jQuery)`: icon.name}</p>
                 <i className={icon.source} />
                 {Translation.filter(n => n.component === "Technology").map(
                   l => {
                     return (
                       <span className="tooltip" key={l}>
+                        <p className="technology__icon__title">
+                        {/* {icon.name === "js" ? icon.name+`\n (ES6 + jQuery)`: {icon.name} */}
+                        {icon.name}
+                        </p>
                         {props.language === "PL"
                           ? l.PL[index + 1]
                           : l.EN[index + 1]}

@@ -47,7 +47,7 @@ export const Footer = props => {
               <input type='text' id="name" required placeholder={props.language === "PL" ? lang.PL[2] : lang.EN[2]}/>
               <label>Mail</label>
               <input type='mail' id="mail" required placeholder="e-mail"/>
-              <label>{props.language === "PL" ? lang.PL[0] : lang.EN[0]}</label>
+              <label>{props.language === "PL" ? lang.PL[3] : lang.EN[3]}</label>
               <textarea id="message" placeholder={props.language === "PL" ? lang.PL[3] : lang.EN[3]}></textarea>
               <input type="submit" value={props.language === "PL" ? lang.PL[4] : lang.EN[4]} />
               </form>

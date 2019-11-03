@@ -17,9 +17,12 @@
     max-width: 50em;
     margin: 0.625em auto;
     padding: 1.5625em;
-    border-radius: 0.9375em;
+    border-radius: 0.2em;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
+    -webkit-box-shadow: 0.3125em 0.3125em 0.3125em 0em rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0.3125em 0.3125em 0.3125em 0em rgba(0, 0, 0, 0.75);
+    box-shadow: 0.3125em 0.3125em 0.3125em 0em rgba(0, 0, 0, 0.75);
     p {
       padding: 1.5625em;
       line-height: 2em;

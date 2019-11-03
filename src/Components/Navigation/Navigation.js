@@ -39,7 +39,6 @@ class Navigation extends Component {
     const props = this.props;
     return (
       <>
-       :
       <div className={this.state.swap ? 'menu__hidden__curtain' : 'menu__visible__curtain'}>
         <nav>
           {MenuElements.map((item,index) => (
