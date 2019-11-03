@@ -13,7 +13,6 @@ import polish from "../img/polish.png";
 import "../scss/style.scss";
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -37,22 +36,21 @@ class App extends Component {
     scroll.scrollToTop();
   };
 
-
   render() {
     return (
       <>
         <HashRouter>
           <button className="btn__language" onClick={this.Language}>
-             {this.state.lang === "PL" ? <img src={english} /> : <img src={polish} />}
+            {this.state.lang === "PL" ? (<img src={english} />) : (<img src={polish} />)}
           </button>
           <Header language={this.state.lang} />
-          <Navigation language={this.state.lang} /> 
-          <About language={this.state.lang}/>
-          <Technology language={this.state.lang}/>
-          <Projects language={this.state.lang}/>
-          <Footer language={this.state.lang}/>
+          <Navigation language={this.state.lang} />
+          <About language={this.state.lang} />
+          <Technology language={this.state.lang} />
+          <Projects language={this.state.lang} />
+          <Footer language={this.state.lang} />
           <button className="scrollTop" onClick={this.scrollToTop}>
-             <i className="fas fa-arrow-up" />
+            <i className="fas fa-arrow-up" />
           </button>
         </HashRouter>
       </>

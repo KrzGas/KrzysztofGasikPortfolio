@@ -4,7 +4,7 @@
 .menu__wrapper {
   position: fixed;
   right: 0.625em;
-  top: -4em;
+  top: -3em;
   z-index: 4;
   i {
     display: flex;
@@ -15,7 +15,8 @@
 .menu__visible__curtain, .menu__hidden__curtain {
   width: 100%;
   background: rgba(0, 0, 0, 0.55);
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   display: flex;
   justify-content: center;
@@ -55,17 +56,13 @@ nav {
   }
 }
 
-
-
 .fa-window-close,
 .fa-bars {
-  font-size: 2.1875em;
   margin: 1.5625em 0;
 }
 
 .fa-bars {
   color: $color2;
-  
 }
 
 .fa-bars:hover {
@@ -94,7 +91,7 @@ nav {
     font-size: 1.875em;
   }
   @media (min-width: 1200px) {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
